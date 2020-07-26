@@ -1,0 +1,102 @@
+:host {
+    --main-pink: #e82c5a;
+    --secondary-blue: #19daec;
+    font-family: 'Recursive', sans-serif, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-form {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-wrap {
+    background-color: rgb(255, 255, 255);
+}
+
+.content {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    min-height: auto;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+
+.content > span {
+    margin-bottom: 2rem;
+}
+
+.content > span:nth-of-type(2) {
+    margin-bottom: 0.5rem;
+}
+
+svg#clouds {
+    position: fixed;
+    bottom: -300px;
+    left: 50%;
+    z-index: -10;
+    width: 1920px;
+    transform: translateX(-50%);
+}
+
+svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+}
+
+.twitter-share {
+    width: 36px;
+    fill: white;
+    position: absolute;
+    left: auto;
+    right: 16px;
+    top: 16px;
+    transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+}
+
+.twitter-share:hover {
+    fill: var(--main-pink);
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+        width: 100%;
+    }
+    
+    .card:not(.highlight-card) {
+        height: 16px;
+        margin: 8px 0;
+    }
+    
+    .card.highlight-card span {
+        margin-left: 72px;
+    }
+    
+    svg#rocket-smoke {
+        right: 120px;
+        transform: rotate(-5deg);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+        display: none;
+        visibility: hidden;
+    }
+}

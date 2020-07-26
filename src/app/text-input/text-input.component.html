@@ -1,0 +1,14 @@
+<div class="input-group url-form">
+    <input
+        name="texturl"
+        #texturl
+        class="form-control url-input"
+        type="text"
+        placeholder="https://my-site.com"
+        [(ngModel)]="textUrl"
+        (keyup.enter)="submitUrl()"
+        [pattern]="pattern"
+        required
+    />
+    <button class="btn btn-primary" (click)="submitUrl()" type="button">Go</button>
+</div>
